@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use App\Models\Team;
@@ -19,3 +20,9 @@ Route::get('/teams', function () {
         'teams' => Team::all()
     ]); // Teams page
 })->name('teams');
+
+Route::get('/orders', function () {
+    return view('pages.orders', [
+        'orders' => Order::all()
+    ]); // Teams page
+})->name('orders');

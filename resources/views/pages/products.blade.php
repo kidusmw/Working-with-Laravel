@@ -5,7 +5,8 @@
     <ul>
         @foreach ($products as $product)
             <li>
-                <x-products-list :name="$product['name']" :quantity="$product['quantity']" />
+                <x-item-list :name="$product['name']" :quantity="$product['quantity']" />
+                {{-- <x-item-list :name="$product['name']" :quantity="$product['quantity']" /> --}}
             </li>
         @endforeach
     </ul>
