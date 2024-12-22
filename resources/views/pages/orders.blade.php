@@ -5,10 +5,12 @@
     <ul>
         <li>
             @foreach ($orders as $order)
-                </x-item-list 
+                <x-item-list 
+                    :order_id="$order['order_id']" 
                     :name="$order['order_item']" 
+                    :order_by="$order['order_by']" 
                     :quantity="$order['order_qty']" 
-                >
+                />
             @endforeach
         </li>
     </ul>
